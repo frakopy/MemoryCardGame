@@ -8,7 +8,7 @@ let firstCard, secondCard
 
 const matchFound = new Audio('/audio_files/match_found.wav')
 const matchFail = new Audio('/audio_files/match_fail.wav')
-let backgroundAudio = new Audio('/audio_files/background_music.wav')
+let backgroundAudio = new Audio('https://github.com/frakopy/MemoryCardGame/tree/master/audio_files/background_music.wav')
 backgroundAudio.loop = true;
 backgroundAudio.volume =  0.2;
 
