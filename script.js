@@ -13,6 +13,8 @@ else{
     gsap.to("header", {duration: 2, scale:1, y: 250, ease: "bounce"})
 }
 
+gsap.to("section", {duration:2, opacity: "1",  delay: 1.5})
+
 const btnRestart = document.getElementById('restart')
 const cards = document.querySelectorAll('.memory-card')
 let cardFliped = false

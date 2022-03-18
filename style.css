@@ -48,6 +48,7 @@ button:active{
     justify-content: center;
     align-content: center;
     perspective: 1000px;
+    opacity: 0;
 
 }
 
