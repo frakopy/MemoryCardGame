@@ -13,9 +13,11 @@ body{
 header{
     color: #F30A49;
     position: absolute;
-    top: 40px;
+    top: -200px;
     font-family: 'Noto Serif', serif;
+    transform: scale(0);
 }
+
 
 button{
     background-color: #EEEEEE;

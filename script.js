@@ -1,14 +1,19 @@
 'use strict'
 
+//Animation section trough GSAP
+gsap.to("header", {duration: 2, scale:1, y: 250, ease: "bounce"})
+
 const btnRestart = document.getElementById('restart')
-const cards = document.querySelectorAll('.memory-card');
+const cards = document.querySelectorAll('.memory-card')
 let cardFliped = false
 let cardLocked = false
 let firstCard, secondCard
 
-const matchFound = new Audio('/audio_files/match_found.wav')
-const matchFail = new Audio('/audio_files/match_fail.wav')
-let backgroundAudio = new Audio('/audio_files/background_music.wav')
+// we use the root https://raw.githubusercontent.com/frakopy followed by our repo and directory where our files are
+const matchFound = new Audio('https://raw.githubusercontent.com/frakopy/MemoryCardGame/master/audio_files/match_found.wav')
+const matchFail = new Audio('https://raw.githubusercontent.com/frakopy/MemoryCardGame/master/audio_files/match_fail.wav')
+let backgroundAudio = new Audio('https://raw.githubusercontent.com/frakopy/MemoryCardGame/master/audio_files/background_music.wav')
+
 backgroundAudio.loop = true;
 backgroundAudio.volume =  0.2;
 
