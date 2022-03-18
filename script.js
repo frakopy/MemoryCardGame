@@ -1,7 +1,17 @@
 'use strict'
 
-//Animation section trough GSAP
-gsap.to("header", {duration: 2, scale:1, y: 250, ease: "bounce"})
+
+const screenWidth = screen.width 
+if( screenWidth >= 300 && screenWidth <= 700 ) {
+    //Animation section trough GSAP
+    gsap.to("header", {duration: 2, scale:1, y: 150, ease: "bounce"})
+}
+
+else{
+    console.log('Screem > than 700px')
+    //Animation section trough GSAP
+    gsap.to("header", {duration: 2, scale:1, y: 250, ease: "bounce"})
+}
 
 const btnRestart = document.getElementById('restart')
 const cards = document.querySelectorAll('.memory-card')
@@ -9,17 +19,9 @@ let cardFliped = false
 let cardLocked = false
 let firstCard, secondCard
 
-<<<<<<< HEAD
-// we use the root https://raw.githubusercontent.com/frakopy followed by our repo and directory where our files are
 const matchFound = new Audio('https://raw.githubusercontent.com/frakopy/MemoryCardGame/master/audio_files/match_found.wav')
 const matchFail = new Audio('https://raw.githubusercontent.com/frakopy/MemoryCardGame/master/audio_files/match_fail.wav')
 let backgroundAudio = new Audio('https://raw.githubusercontent.com/frakopy/MemoryCardGame/master/audio_files/background_music.wav')
-
-=======
-const matchFound = new Audio('https://raw.githubusercontent.com/frakopy/MemoryCardGame/master/audio_files/match_found.wav')
-const matchFail = new Audio('https://raw.githubusercontent.com/frakopy/MemoryCardGame/master/audio_files/match_fail.wav')
-let backgroundAudio = new Audio('https://raw.githubusercontent.com/frakopy/MemoryCardGame/master/audio_files/background_music.wav')
->>>>>>> d4997e7ab52a248aca34b9f90fa8d86539937d3b
 backgroundAudio.loop = true;
 backgroundAudio.volume =  0.2;
 
