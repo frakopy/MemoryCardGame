@@ -25,8 +25,10 @@ let firstCard, secondCard
 const matchFound = new Audio('https://raw.githubusercontent.com/frakopy/MemoryCardGame/master/audio_files/match_found.wav')
 const matchFail = new Audio('https://raw.githubusercontent.com/frakopy/MemoryCardGame/master/audio_files/match_fail.wav')
 let backgroundAudio = new Audio('https://raw.githubusercontent.com/frakopy/MemoryCardGame/master/audio_files/background_music.wav')
-backgroundAudio.loop = true;
+backgroundAudio.loop = true
+let backgroundAudioIsPlaying = false
 backgroundAudio.volume =  0.2;
+
 
 const orderRandom = () => {
     cards.forEach(card => {
@@ -62,8 +64,13 @@ const checkMatch = () => {
 
 
 const flipCard = (card) => {
-    //Play the background audio after click a card
-    backgroundAudio.play()
+
+    //Play the background audio after click a card if backgroundAudioIsPlaying is false
+    if(!backgroundAudioIsPlaying){
+        backgroundAudio.play()
+        backgroundAudioIsPlaying = true
+        console.log('Audio played')
+    } 
 
     if(firstCard === card) return  
     if(cardLocked) return
