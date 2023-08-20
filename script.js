@@ -65,7 +65,8 @@ const checkMatch = () => {
 
 const flipCard = (card) => {
 
-    //Play the background audio after click a card if backgroundAudioIsPlaying is false
+    //Play the background audio after click a card if backgroundAudioIsPlaying is True
+    //Initially backgroundAudioIsPlaying is false but with !backgroundAudioIsPlaying change to True
     if(!backgroundAudioIsPlaying){
         backgroundAudio.play()
         backgroundAudioIsPlaying = true
